@@ -1,0 +1,968 @@
+<!-- Gelato Genie - Our Process -->
+<!DOCTYPE html>
+
+<html class="dark bg-background" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gelato Genie - The Alchemy</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#3e313c",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#e9c349",
+                        "surface-variant": "#3e313c",
+                        "surface-container": "#271c27",
+                        "on-tertiary": "#383015",
+                        "inverse-on-surface": "#392c38",
+                        "outline": "#9a8d96",
+                        "tertiary": "#d4c69f",
+                        "background": "#1a101a",
+                        "on-primary": "#482247",
+                        "inverse-surface": "#f1ddec",
+                        "on-tertiary-container": "#908462",
+                        "surface-container-high": "#322631",
+                        "surface": "#1a101a",
+                        "tertiary-container": "#231c04",
+                        "on-secondary-container": "#342800",
+                        "inverse-primary": "#7b5077",
+                        "on-primary-fixed": "#300c30",
+                        "secondary-container": "#af8d11",
+                        "primary-fixed-dim": "#ebb6e4",
+                        "on-surface-variant": "#d1c3cb",
+                        "on-secondary": "#3c2f00",
+                        "primary-fixed": "#ffd6f7",
+                        "tertiary-fixed": "#f0e2ba",
+                        "primary-container": "#310d31",
+                        "on-primary-container": "#a4759f",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error": "#690005",
+                        "primary": "#ebb6e4",
+                        "outline-variant": "#4e444b",
+                        "on-background": "#f1ddec",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container-lowest": "#150b15",
+                        "tertiary-fixed-dim": "#d4c69f",
+                        "on-tertiary-fixed-variant": "#4f4629",
+                        "on-surface": "#f1ddec",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface-container-low": "#231823",
+                        "surface-dim": "#1a101a",
+                        "on-primary-fixed-variant": "#61385e",
+                        "surface-tint": "#ebb6e4",
+                        "surface-bright": "#423541",
+                        "on-tertiary-fixed": "#221b03",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": [
+                            "Newsreader"
+                        ],
+                        "body": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label": [
+                            "Plus Jakarta Sans"
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .text-gradient-primary {
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.primary-container'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.primary-container'));
+        }
+    </style>
+</head>
+
+<body id="home"
+    class="bg-background text-on-background font-body antialiased selection:bg-primary-container selection:text-primary flex flex-col min-h-screen overflow-x-hidden">
+    <!-- TopNavBar Component -->
+    <nav aria-label="Main Navigation"
+        class="fixed top-0 w-full z-50 bg-[#1a101a] dark:bg-[#1a101a] backdrop-blur-md bg-opacity-80 transition-colors duration-300">
+        <div class="flex justify-between items-center px-10 py-6 max-w-full mx-auto">
+            <a aria-label="Gelato Genie Home" class="text-2xl font-headline italic text-[#e9c349] tracking-wide"
+                href="/">
+                Gelato Genie
+            </a>
+            <div class="hidden md:flex gap-8 items-center font-label font-medium tracking-wide">
+                <a class="text-[#f1ddec] opacity-70 hover:text-[#ebb6e4] transition-all duration-500 ease-out hover:scale-105"
+                    href="#home">Home</a>
+                <a class="text-[#f1ddec] opacity-70 hover:text-[#ebb6e4] transition-all duration-500 ease-out hover:scale-105"
+                    href="#menu">Menu</a>
+                <a class="text-[#f1ddec] opacity-70 hover:text-[#ebb6e4] transition-all duration-500 ease-out hover:scale-105"
+                    href="#catering">Catering</a>
+                <a class="text-[#f1ddec] opacity-70 hover:text-[#ebb6e4] transition-all duration-500 ease-out hover:scale-105"
+                    href="#about">About Us</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button
+                    class="hidden lg:block text-[#f1ddec] opacity-70 hover:text-[#ebb6e4] transition-all duration-500 ease-out font-label font-medium tracking-wide">
+                    Reserve a Tasting
+                </button>
+                <button aria-label="Shopping Bag" class="text-[#f1ddec] hover:text-[#ebb6e4] transition-colors">
+                    <span class="material-symbols-outlined text-2xl" data-icon="shopping_bag">shopping_bag</span>
+                </button>
+                <button aria-label="Open Menu" id="mobile-menu-btn" class="md:hidden text-[#f1ddec] hover:text-[#ebb6e4] transition-colors">
+                    <span class="material-symbols-outlined text-2xl" id="mobile-menu-icon" data-icon="menu">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-[100%] left-0 w-full bg-[#1a101a] bg-opacity-95 backdrop-blur-lg border-t border-white/5 shadow-2xl flex-col items-center py-8 gap-6 font-label font-medium tracking-wide h-screen md:h-auto">
+            <a class="text-[#f1ddec] opacity-90 text-xl hover:text-[#ebb6e4] hover:scale-105 transition-all p-2 mobile-link" href="#home">Home</a>
+            <a class="text-[#f1ddec] opacity-90 text-xl hover:text-[#ebb6e4] hover:scale-105 transition-all p-2 mobile-link" href="#menu">Menu</a>
+            <a class="text-[#f1ddec] opacity-90 text-xl hover:text-[#ebb6e4] hover:scale-105 transition-all p-2 mobile-link" href="#catering">Catering</a>
+            <a class="text-[#f1ddec] opacity-90 text-xl hover:text-[#ebb6e4] hover:scale-105 transition-all p-2 mobile-link" href="#about">About Us</a>
+            <button class="mt-4 text-[#1a101a] bg-gradient-to-br from-primary to-primary-container px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-[0_0_15px_rgba(235,182,228,0.3)]">
+                Reserve a Tasting
+            </button>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileIcon = document.getElementById('mobile-menu-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            
+            function toggleMenu() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    mobileIcon.textContent = 'close';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    mobileIcon.textContent = 'menu';
+                }
+            }
+            
+            mobileBtn.addEventListener('click', toggleMenu);
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    mobileIcon.textContent = 'menu';
+                });
+            });
+        });
+    </script>
+    <!-- Main Content -->
+    <main class="pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="relative px-6 md:px-16 max-w-[1440px] mx-auto mb-32 flex flex-col items-center text-center">
+            <h1
+                class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-background leading-tight mb-4 relative z-10 tracking-tight flex flex-col md:block items-center">
+                <span>Gelato Genie</span> <br class="hidden md:block" />
+                <span class="text-secondary italic text-2xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 block font-normal tracking-normal max-w-full">Make a Wish. Taste the Magic.</span>
+            </h1>
+            <p class="font-body text-on-surface-variant max-w-2xl text-lg md:text-xl mb-12 relative z-10 font-light">
+                We believe that true indulgence cannot be outsourced. Every scoop is crafted in our own kitchen, where
+                premium ingredients meet an obsessive dedication to the craft.
+            </p>
+            <div class="w-full h-[614px] rounded-xl overflow-hidden relative shadow-[0_24px_48px_rgba(21,11,21,0.5)]">
+                <img alt="Dark, moody atmospheric shot of artisanal ice cream making" class="w-full h-full object-cover"
+                    data-alt="Close up of dark rich chocolate ice cream being churned in a vintage metal bowl, dark moody lighting, cinematic, high contrast, elegant food photography"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBae_sueY-oT8aD6Pn6-okBKdRm1uN2OzV5IP-zilFNqyMpz7VoQwfVrosZQd00kSqFVONrGHtCEfEpLi1zLkR0kCmjcrWoUFjrhKsSaQLvSnxZ9CFV39mXu8fBm7d3_6NilCSlUotVGMmx8r948D7WA1fnZJTCpqI7ef8OKm1J1KrDnpq-KXvBUDsP-p4vGHM5U234rd4zFx8rSPrs6M8mZohqpOKMmIEKx1oeK7V2qXPYNr60bQN7ZCwmPS_uLfqfaricv_V9cO5N" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80">
+                </div>
+            </div>
+        </section>
+        <!-- Process Step 1: Purest Ingredients -->
+        <section class="px-6 md:px-16 max-w-[1440px] mx-auto mb-32">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2 relative order-2 lg:order-1">
+                    <div class="w-full aspect-[4/5] rounded-xl overflow-hidden shadow-[0_24px_48px_rgba(21,11,21,0.5)]">
+                        <img alt="Fresh vanilla beans and spices on dark marble" class="w-full h-full object-cover"
+                            data-alt="Macro shot of fresh Madagascar vanilla beans and star anise scattered on a deeply textured black marble surface, dramatic side lighting, rich shadows, culinary editorial"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwccvpGFsxZ9DjhI-TFU7760Xh6gACtRM0tu1O55Lz1N3VYrgySUT4wHn0o87HaGTjZB_Debl4XWq-t7rJLB4HdaqTLZ2tsK392av55MBSGPk2DSaqULpgX9kKSxMAE5bQbF8SLUiRXhDLrfHeM6ZS47_3GMRHaf2YRizQiqcCtTmvX6jEz29ZcSYwuG0QS5lMUikOxA4-EQCc0fiQ-BogXzy6Enk_Yl9SXR5k3aG3xc6_ibxRgWc2fblRzHQaoyw2NZ8XZ1yUlOGX" />
+                    </div>
+                    <!-- Decorative Floating Element -->
+                    <div
+                        class="absolute -bottom-8 -right-8 w-48 h-48 bg-surface-container-high rounded-full blur-3xl opacity-40">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col justify-center order-1 lg:order-2 z-10">
+                    <span class="text-primary font-label text-sm tracking-[0.2em] uppercase mb-4 block">Chapter I</span>
+                    <h2 class="font-headline text-4xl md:text-5xl text-secondary mb-6 leading-tight">In-House
+                        Manufacturing</h2>
+                    <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 font-light">
+                        Our journey begins in our own kitchen. We take immense pride in our in-house manufacturing
+                        process, crafting every batch of our premium gelato, softy, and kulfi from scratch. By
+                        controlling the entire production process, we ensure that every spoonful meets our obsessive
+                        standards for quality and taste. It's a commitment to the craft that simply cannot be
+                        outsourced.
+                    </p>
+                    <ul class="space-y-4 font-body text-on-background">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-1"
+                                data-icon="temp_preferences_custom">temp_preferences_custom</span>
+                            <span>Complete control over every ingredient and step.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-1" data-icon="spa">spa</span>
+                            <span>Crafted entirely in our own production facility.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-1"
+                                data-icon="agriculture">agriculture</span>
+                            <span>Obsessive dedication to quality and consistency.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Process Step 2: Slow Churned Magic -->
+        <section class="px-6 md:px-16 max-w-[1440px] mx-auto mb-32">
+            <div class="bg-surface-container-low rounded-[2rem] p-10 md:p-16 lg:p-24 relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10">
+                    <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                        <span class="text-primary font-label text-sm tracking-[0.2em] uppercase mb-4 block">Chapter
+                            II</span>
+                        <h2 class="font-headline text-4xl md:text-5xl text-secondary mb-6 leading-tight">Fresh Daily
+                            Batches</h2>
+                        <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 font-light">
+                            Freshness is the soul of our creations. We churn our gelato, softy, and kulfi fresh every
+                            single day. Producing in small, daily batches ensures that you experience our desserts at
+                            the absolute peak of their flavor, texture, and vibrancy. This painstaking daily ritual
+                            yields a product that is impossibly dense, velvety, and intensely flavorful.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 mt-4">
+                            <div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/15">
+                                <div class="text-secondary text-3xl font-headline mb-2">100%</div>
+                                <div class="font-label text-sm text-on-surface-variant">Made Fresh Daily</div>
+                            </div>
+                            <div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/15">
+                                <div class="text-secondary text-3xl font-headline mb-2">0%</div>
+                                <div class="font-label text-sm text-on-surface-variant">Artificial Preservatives</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 relative">
+                        <div
+                            class="w-full aspect-square rounded-full overflow-hidden shadow-[0_24px_48px_rgba(21,11,21,0.5)] border border-outline-variant/20">
+                            <img alt="Swirls of thick ice cream being mixed" class="w-full h-full object-cover"
+                                data-alt="Top down view of thick, velvety purple berry ice cream swirling in a churning machine, smooth texture, dark moody aesthetic, cinematic lighting, extreme close up"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAJQ7VgZnJzXbofjs3d6HPfGdmUv1bOEOCtAc8l6nFBWIXu9wcDMDAn2WkxtUd08l9J6_9YzDtRg5wZ6BBGi32NEtFOgNxM7Si4egsEUFgud5j_g--mWrB-HSQC0nUTDD9FGeWjQnA7fhs54N3BNJ248IMzDzZzx8rdSNUqsl92rcKhVXO9mZQ_62bAtrzPN9UbQ1swFslJkhsxEKZiswdC_WTf_ZqS9_SfdRyUrm2gSoX3Pr9YwGNHc24lYFd72RtfD4zsx0YrkLu" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Background decorative elements -->
+                <div
+                    class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-highest/20 via-transparent to-transparent pointer-events-none">
+                </div>
+            </div>
+        </section>
+        <!-- Process Step 3: The Twilight Batches -->
+        <section class="px-6 md:px-16 max-w-[1440px] mx-auto mb-20">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2 relative order-2 lg:order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg mt-8">
+                            <img alt="Finished dark ice cream scoops" class="w-full h-full object-cover"
+                                data-alt="Two perfect scoops of dark charcoal and gold dusted ice cream in a sleek black ceramic bowl, dark background, elegant food styling, moody lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEN0FtUlJieqePlWYcBxXDktiLDgxrA9KF0McBq9_L_vCCRrkbkv4uFlNJsyy7Km10LVdWVDW5kDjtVXvaw9y83R1YtEd24EPzTTOZkfZmq6YACCUXyLBZAaQkkjW4nWpw_f34jFa-YFZB_h9haB1ztfo_mNDKUd1ZdXUZfumO0mz-UaQWfAcvj-yX5boyFTo0DMfJh-KWHb885FWUC5T8BgC9XijrJuUrvhTrxvx_69XSFYRkQdN-VddlPE1BIwnQiSrcrv_yMJf3" />
+                        </div>
+                        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg">
+                            <img alt="Pouring rich sauce over ice cream" class="w-full h-full object-cover"
+                                data-alt="Thick dark berry compote being poured slowly over a scoop of pale lavender ice cream, dark moody background, high resolution, slow motion feel"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF7pUR9OO9giyHActkZgamOSigTHMefXIwjG9vi17VMfKiPlzlEQUsZp3Maulai5iYiUxIiT8CXA38L9zOXYffnViCGefRLXHgiaKf8dHVgaYiwJ-xIH1q7AFPNeIhDvjlZtlz_tMBrOYX6ZgzMccCZTLT0-recdSizL0CN2MAP-qu6E_i0Rf68QK7sV60SCxqYmW2nuvE0kS8jlSYqU6KsTVdGpCdviCeAJsRR3A9mAy7UV9Czuxx4udK0WRiNU2nODyRFl5iDddx" />
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col justify-center order-1 lg:order-2 z-10 pl-0 lg:pl-12">
+                    <span class="text-primary font-label text-sm tracking-[0.2em] uppercase mb-4 block">Chapter
+                        III</span>
+                    <h2 class="font-headline text-4xl md:text-5xl text-secondary mb-6 leading-tight">Artisanal Alchemy
+                    </h2>
+                    <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 font-light">
+                        Our process is a true artisanal alchemy. We are strictly committed to creating premium gelato,
+                        softy, and kulfi without the use of artificial preservatives, stabilizers, or synthetic flavors.
+                        Instead, we rely on genuine flavor extraction from the finest natural ingredients—infusing our
+                        bases with real spices, pure chocolates, and fresh fruits to craft profiles that delight the
+                        palate purely and naturally.
+                    </p>
+                    <a class="inline-flex items-center gap-2 text-primary font-headline text-xl border-b border-primary pb-1 w-max hover:text-secondary hover:border-secondary transition-colors duration-300"
+                        href="/flavors">
+                        Explore Our Creations
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Content -->
+    <main id="menu" class="flex-grow pt-32 pb-24">
+        <!-- Hero Section -->
+        <header class="px-6 md:px-16 lg:px-24 max-w-7xl mx-auto mb-20 relative">
+            <div class="max-w-3xl">
+                <h1 class="font-headline text-5xl md:text-7xl text-on-background leading-tight mb-6 tracking-wide">
+                    The <span class="text-secondary italic">Signature</span> Gallery
+                </h1>
+                <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
+                    Explore our complete collection of frozen masterpieces. From artisanal gelato to heritage kulfi and
+                    power-packed shakes, every scoop is crafted for excellence.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="px-6 py-2 rounded-full bg-surface-container-low text-on-background font-label text-sm border border-outline-variant/15 hover:bg-surface-container-high transition-colors">
+                        All
+                    </button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label text-sm transition-colors relative overflow-hidden group">
+                        <span class="relative z-10">Gelato</span>
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.primary)_0%,transparent_100%)] opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                        </div>
+                    </button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-surface-container-low text-on-background font-label text-sm border border-outline-variant/15 hover:bg-surface-container-high transition-colors">
+                        Softy
+                    </button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-surface-container-low text-on-background font-label text-sm border border-outline-variant/15 hover:bg-surface-container-high transition-colors">
+                        Kulfi
+                    </button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-surface-container-low text-on-background font-label text-sm border border-outline-variant/15 hover:bg-surface-container-high transition-colors">
+                        Power Bar
+                    </button>
+                </div>
+            </div>
+            <!-- Decorative Element -->
+            <div
+                class="absolute top-0 right-0 -z-10 w-96 h-96 bg-[radial-gradient(circle,theme(colors.primary-container)_0%,transparent_70%)] opacity-50 blur-3xl pointer-events-none hidden lg:block">
+            </div>
+        </header>
+        <!-- Gallery Grid (Bento/Asymmetric Style) -->
+        <section class="px-6 md:px-16 lg:px-24 max-w-[1400px] mx-auto space-y-24">
+            <!-- Artisanal Gelato Section -->
+            <div>
+                <h2
+                    class="font-headline text-3xl md:text-4xl text-secondary mb-10 pb-4 border-b border-outline-variant/20 tracking-wide">
+                    Artisanal Gelato</h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 auto-rows-[minmax(400px,auto)]">
+                    <!-- Flavor Card 1 (Large) -->
+                    <article
+                        class="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 relative group rounded-scoop overflow-hidden bg-surface-container-high flex flex-col shadow-[0_24px_48px_rgba(21,11,21,0.5)]">
+                        <div class="absolute inset-0 z-0">
+                            <img alt="Dark purple lavender gelato scoop with edible gold flakes on a dark marble surface"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                data-alt="Dark purple lavender gelato scoop with edible gold flakes on a dark marble surface, cinematic lighting, moody atmosphere"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP70OrrJEA-kYi9mXGAQe5ZoHf1GYrcMxHWavrHB4xp_UKWQacnNh0WRTW4pkviHPs3vVwwJ4QhCPVTfoD95ypMO9h1tC74qh3Ym2lXitv6P5KKkYh3c1W6ITbRmd3rmk7FUakzHPmJfay1GGhQaQpuBp95mOpliRQ23HoNMy3EMcH1mwXZPL_W_FB4TRjNvbzFLClm8OYH9auJi5uyNFqmFvlRRwpcmqsVN6rtDzs3DKnkYDwbvfu4aAumHt8Dq1bGzz5r32urue8" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent">
+                            </div>
+                        </div>
+                        <div class="relative z-10 mt-auto p-8 md:p-12">
+                            <div
+                                class="inline-flex items-center space-x-2 bg-surface-container-lowest/80 backdrop-blur-sm px-4 py-1.5 rounded-full mb-6">
+                                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                <span
+                                    class="font-label text-xs uppercase tracking-widest text-primary-fixed-dim">Signature</span>
+                            </div>
+                            <div class="flex justify-between items-end mb-4">
+                                <h2 class="font-headline text-4xl md:text-5xl text-on-background">Midnight Magic</h2>
+                                <span class="font-label text-2xl text-secondary">Rs. 150</span>
+                            </div>
+                            <p class="font-body text-lg text-on-surface-variant italic mb-8 max-w-xl">
+                                "A whisper of lavender in a field of cream, kissed by wild honey."
+                            </p>
+                            <!-- Hover Reveal Content -->
+                            <div
+                                class="grid grid-cols-2 gap-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out h-0 group-hover:h-auto overflow-hidden">
+                                <div>
+                                    <h4 class="font-label text-xs text-outline uppercase tracking-wider mb-2">Tasting
+                                        Notes</h4>
+                                    <ul class="font-body text-sm text-on-surface space-y-1">
+                                        <li>• French Lavender</li>
+                                        <li>• Sweet Cream</li>
+                                        <li>• Wildflower Honey</li>
+                                    </ul>
+                                </div>
+                                <div class="flex items-end justify-end">
+                                    <button
+                                        class="flex items-center space-x-2 text-secondary hover:text-secondary-fixed transition-colors">
+                                        <span class="font-label font-medium">Add to Order</span>
+                                        <span class="material-symbols-outlined">arrow_forward</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Flavor Card 2 -->
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-high group relative flex flex-col p-6 shadow-[0_8px_32px_rgba(21,11,21,0.3)] hover:shadow-[0_16px_48px_rgba(21,11,21,0.5)] transition-all duration-500">
+                        <div class="h-64 -mx-6 -mt-6 mb-6 overflow-hidden relative">
+                            <img alt="Dark chocolate gelato scoop with cocoa dusting on a dark slate board"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Rich dark chocolate gelato scoop with cocoa dusting on a dark slate board, moody dramatic side lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYdlNmiD99t7TE5GFwdh8UmTFPE6ogHNskrz7xlGCiZOhQ-PZ1iaG2lqSOndtJ-UYuLCszbhzpgMpwKophP_ev74JFFe2sWJDNiCvE1-C_HGU0VRMIWqorNo17oXo5VpTRrCYKyeknYmhrzJ8iqtlRm8F1jTXnRP0YicLMUJN-TeGAM8D9QcuZMCOnePVxis4V9RZFS4W-2uDO1izy7dc9uAdsjqhj06vk_GXbDWh6lQMXsnpVAM-WFKN3D0xWuGV7tW1j1CwNC8Zo" />
+                        </div>
+                        <div class="flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3
+                                    class="font-headline text-3xl text-on-background group-hover:text-secondary transition-colors">
+                                    Saffron Dreams</h3>
+                                <span class="font-label text-lg text-secondary">Rs. 200</span>
+                            </div>
+                            <p class="font-body text-sm text-on-surface-variant italic mb-6">
+                                "Golden threads of pure saffron spun into rich, creamy indulgence."
+                            </p>
+                            <div
+                                class="mt-auto pt-4 border-t border-outline-variant/15 flex justify-between items-center">
+                                <div class="flex flex-col">
+                                    <span class="font-label text-xs text-outline uppercase tracking-wider">Notes</span>
+                                    <span class="font-body text-sm text-on-surface">Kashmiri Saffron, Cardamom</span>
+                                </div>
+                                <button
+                                    class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Flavor Card 3 -->
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-high group relative flex flex-col p-6 shadow-[0_8px_32px_rgba(21,11,21,0.3)] hover:shadow-[0_16px_48px_rgba(21,11,21,0.5)] transition-all duration-500">
+                        <div class="h-64 -mx-6 -mt-6 mb-6 overflow-hidden relative">
+                            <img alt="Pale pink rosewater gelato with crushed pistachios"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Pale pink rosewater gelato scoop with crushed green pistachios, dark background, soft spotlight"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa490KL3zFCfJq3Vf7jRymDuk_QB_xRp_nYWOcRa8L6BDBnGg8KRKSEcJcwFO5bzUvjPbucV0VCFnpXwFKUvqJBKTRpTbCXLTHaE0t1BVWBDvrxnu4GFsrrElo42y5zmB6P6BZBEVmtUnP3vdsQocJXpQ7vwtQ2rmnf-AYxcNO1kXaHH5ioPZdOuzvdR6dyWmE8Mp4zTz39wghwaDqr_jcIoTsE_JK55ytoW74Lp7-GtOGlKR-O6MZvUlUmL7p9CI92q-YPZxUvLvI" />
+                        </div>
+                        <div class="flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3
+                                    class="font-headline text-3xl text-on-background group-hover:text-secondary transition-colors">
+                                    Persian Rose</h3>
+                                <span class="font-label text-lg text-secondary">Rs. 150</span>
+                            </div>
+                            <p class="font-body text-sm text-on-surface-variant italic mb-6">
+                                "A blooming garden at dusk, delicately fragrant."
+                            </p>
+                            <div
+                                class="mt-auto pt-4 border-t border-outline-variant/15 flex justify-between items-center">
+                                <div class="flex flex-col">
+                                    <span class="font-label text-xs text-outline uppercase tracking-wider">Notes</span>
+                                    <span class="font-body text-sm text-on-surface">Rosewater, Pistachio</span>
+                                </div>
+                                <button
+                                    class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Signature Softy Section -->
+            <div>
+                <h2
+                    class="font-headline text-3xl md:text-4xl text-secondary mb-10 pb-4 border-b border-outline-variant/20 tracking-wide">
+                    Signature Softy</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-low border border-outline-variant/10 p-8 flex flex-col shadow-[0_8px_32px_rgba(21,11,21,0.2)] hover:shadow-[0_16px_48px_rgba(21,11,21,0.4)] transition-all duration-500">
+                        <div class="flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-3xl text-on-background">Classic Vanilla</h3>
+                                <span class="font-label text-xl text-secondary">Rs. 30</span>
+                            </div>
+                            <p class="font-body text-on-surface-variant mb-6">
+                                Timeless, smooth, and perfectly whipped. The quintessential softy experience.
+                            </p>
+                            <div class="mt-auto pt-4 flex justify-between items-center">
+                                <button
+                                    class="flex items-center space-x-2 text-primary hover:text-primary-fixed transition-colors">
+                                    <span class="font-label font-medium">Order Now</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-low border border-outline-variant/10 p-8 flex flex-col shadow-[0_8px_32px_rgba(21,11,21,0.2)] hover:shadow-[0_16px_48px_rgba(21,11,21,0.4)] transition-all duration-500">
+                        <div class="flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-3xl text-on-background">Choco Dip</h3>
+                                <span class="font-label text-xl text-secondary">Rs. 50</span>
+                            </div>
+                            <p class="font-body text-on-surface-variant mb-6">
+                                Our classic softy encased in a crackling shell of premium dark chocolate.
+                            </p>
+                            <div class="mt-auto pt-4 flex justify-between items-center">
+                                <button
+                                    class="flex items-center space-x-2 text-primary hover:text-primary-fixed transition-colors">
+                                    <span class="font-label font-medium">Order Now</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Heritage Kulfi Section -->
+            <div>
+                <h2
+                    class="font-headline text-3xl md:text-4xl text-secondary mb-10 pb-4 border-b border-outline-variant/20 tracking-wide">
+                    Heritage Kulfi</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-low border border-outline-variant/10 p-8 flex flex-col shadow-[0_8px_32px_rgba(21,11,21,0.2)] hover:shadow-[0_16px_48px_rgba(21,11,21,0.4)] transition-all duration-500">
+                        <div class="flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-3xl text-on-background">Malai Kulfi</h3>
+                                <span class="font-label text-xl text-secondary">Rs. 60</span>
+                            </div>
+                            <p class="font-body text-on-surface-variant mb-6">
+                                Rich, dense, and unyielding. Slow-cooked milk reduced to its essence.
+                            </p>
+                            <div class="mt-auto pt-4 flex justify-between items-center">
+                                <button
+                                    class="flex items-center space-x-2 text-primary hover:text-primary-fixed transition-colors">
+                                    <span class="font-label font-medium">Order Now</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-low border border-outline-variant/10 p-8 flex flex-col shadow-[0_8px_32px_rgba(21,11,21,0.2)] hover:shadow-[0_16px_48px_rgba(21,11,21,0.4)] transition-all duration-500">
+                        <div class="flex-grow flex flex-col">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-3xl text-on-background">Pista Kulfi</h3>
+                                <span class="font-label text-xl text-secondary">Rs. 80</span>
+                            </div>
+                            <p class="font-body text-on-surface-variant mb-6">
+                                Studded with roasted emerald pistachios for a textural delight.
+                            </p>
+                            <div class="mt-auto pt-4 flex justify-between items-center">
+                                <button
+                                    class="flex items-center space-x-2 text-primary hover:text-primary-fixed transition-colors">
+                                    <span class="font-label font-medium">Order Now</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Power Bar (Gym Protein Shakes) Section -->
+            <div>
+                <h2
+                    class="font-headline text-3xl md:text-4xl text-secondary mb-10 pb-4 border-b border-outline-variant/20 tracking-wide">
+                    The Power Bar <span class="text-xl text-on-surface-variant ml-2">Gym Protein Shakes</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Muscle Mango -->
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-low border border-outline-variant/10 p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center relative">
+                        <div
+                            class="absolute right-0 bottom-0 w-64 h-64 bg-[radial-gradient(circle,theme(colors.secondary-container)_0%,transparent_70%)] opacity-10 pointer-events-none">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-3xl text-secondary">Muscle Mango</h3>
+                                <span class="font-label text-xl text-on-background">Rs. 120</span>
+                            </div>
+                            <p class="font-body text-lg text-on-background leading-relaxed mb-6">
+                                Tropical mango blended with high-quality whey isolate. Refreshing recovery in a cup.
+                            </p>
+                            <button
+                                class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+                                <span class="material-symbols-outlined text-lg">add</span>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- Choco Beast -->
+                    <article
+                        class="col-span-1 rounded-scoop overflow-hidden bg-surface-container-low border border-outline-variant/10 p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center relative">
+                        <div
+                            class="absolute right-0 bottom-0 w-64 h-64 bg-[radial-gradient(circle,theme(colors.secondary-container)_0%,transparent_70%)] opacity-10 pointer-events-none">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-headline text-3xl text-secondary">Choco Beast</h3>
+                                <span class="font-label text-xl text-on-background">Rs. 150</span>
+                            </div>
+                            <p class="font-body text-lg text-on-background leading-relaxed mb-6">
+                                Rich dark chocolate, peanut butter, and protein. For those who demand maximum gains.
+                            </p>
+                            <button
+                                class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+                                <span class="material-symbols-outlined text-lg">add</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Canvas -->
+    <main id="catering" class="flex-grow pt-[104px]">
+        <!-- Hero Section -->
+        <section class="relative min-h-[819px] flex items-center justify-center px-6 py-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="" class="w-full h-full object-cover opacity-30"
+                    data-alt="Dark, moody overhead shot of an elegant dinner table setting with dark purple velvet tablecloth, gold cutlery, and subtle glowing candles"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5rode-8XASBR4Yf-5Cqrs4zWXggvqXtHHA4DEsXe8EeIc4YMWaMsl6_5FAElrmCfULyEaaoeuFNFTU-2-eDSwz1fxWBW3LxxN9z51tBlm7P-jI4RkSIerXTYXTr5Kk0h1yM6BYLqSk65Gb1mYgf4VOXvyZJJ23bRv3OhtVv_2gOSzJ5LC5TpLZRfG3Wo5nzKSa3glLdNNB13LdDzLdbM0fWzEJ87-8EtykW2jJdT-Akd_4HvJuWViE5ekUTjGOhf35JQwyARc5R6o" />
+                <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+            </div>
+            <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
+                <span class="font-label text-primary tracking-[0.2em] uppercase text-sm mb-6">Magical Experiences</span>
+                <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-secondary mb-8 leading-tight">
+                    Magical Events &amp; Corporate Gifting
+                </h1>
+                <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mb-12">
+                    Elevate your weddings, college fests, school events, and corporate affairs with artisanal ice cream
+                    experiences tailored for your guests.
+                </p>
+                <button
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-8 py-4 rounded-full font-label font-medium hover:scale-105 transition-transform duration-300 shadow-[0_4px_24px_rgba(235,182,228,0.2)]">
+                    Inquire Now
+                </button>
+            </div>
+        </section>
+        <!-- Services Bento Grid -->
+        <section class="py-24 px-6 md:px-12 max-w-[1400px] mx-auto bg-surface-container-low rounded-[3rem] my-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[400px]">
+                <!-- Moonlight Weddings -->
+                <div class="md:col-span-7 bg-surface-container-high rounded-[2rem] overflow-hidden relative group">
+                    <img alt=""
+                        class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-500"
+                        data-alt="Elegant outdoor evening wedding reception with string lights, dark wood tables, and a specialized dessert cart in soft focus"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfYIiL1QFMl5oyzF7RncsC2p6nj4ajaZkWaCdlhbS5YC6GeZiJ1omjScPH8Gw-XDVIVsdR_-hdUOgl0GjsMu5ReQ_jEQaPulRuQULPG33o0tgp_zaUOnQxsI3CZd7qwwmgTbrPfD7Yb2BAWmlM-80tBxEO-kD2QAVO596Y9Ts1X7ed8NJIb2G4TTw1HmbNIADkcf6qPPhsedIUAKPoRoe0EbOPFwptFI9JnrVKPcK1XpglaTn9hCiD1otgTg1Kw5WbJLcypqvqnwaG" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-10 w-full">
+                        <h2 class="font-headline text-4xl text-secondary mb-4">Weddings &amp; Grand Celebrations</h2>
+                        <p class="font-body text-on-surface-variant mb-6 max-w-md">Bespoke dessert stations featuring
+                            our signature velvet textures and dramatic presentations for your special day.</p>
+                        <a class="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors font-label font-medium"
+                            href="#">
+                            Explore Wedding Packages
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Corporate Enchantment -->
+                <div
+                    class="md:col-span-5 bg-surface-container rounded-[2rem] overflow-hidden relative p-10 flex flex-col justify-end group border border-outline-variant/15 hover:border-secondary/30 transition-colors duration-500">
+                    <img alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay"
+                        data-alt="Sleek modern office space at night with dramatic lighting, focusing on a luxury corporate gift box on a glass table"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoY8QwURJ3PihusjGhO8AhNgpKcqj6HTKtvHPeAFcxFSb-i-Vuz8paX7gHd0qMjYaPhjUf_WLxyym1max2JTIQ-E9ppl915O0JCzdw0KQ7wBMGaPd6bWhQiNSX3UBt2DR29FOlNgi-cj7H6xzAJhS921BQmIwMzkXdrzJyts1NE3U2FbBRCpx9eFpiBj68ftOw6WvDI0wkizKOYtM65in9vx0LCSnhCSfJ9KWS9dl_L2fS9daxaRSrdTKQaoG79Cj1J74Z6Kj5L3hc" />
+                    <div class="relative z-10">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6"
+                            style="font-variation-settings: 'FILL' 1;">school</span>
+                        <h3 class="font-headline text-3xl text-inverse-surface mb-3">School &amp; College Fests</h3>
+                        <p class="font-body text-on-surface-variant text-sm mb-6">Bring the magic to your campus with
+                            our live dessert counters, perfect for school carnivals and college festivals.</p>
+                    </div>
+                </div>
+                <!-- Bespoke Collections (Gifting) -->
+                <div
+                    class="md:col-span-12 bg-surface-container-highest rounded-[2rem] overflow-hidden flex flex-col md:flex-row relative">
+                    <div class="md:w-1/2 p-12 flex flex-col justify-center z-10">
+                        <span class="font-label text-primary tracking-widest text-xs uppercase mb-4">Corporate
+                            Gifting</span>
+                        <h2 class="font-headline text-4xl md:text-5xl text-secondary mb-6 leading-tight">Bespoke Gift
+                            Boxes</h2>
+                        <p class="font-body text-on-surface-variant mb-8">Impress clients and reward teams with
+                            hand-crafted, velvet-lined gift boxes containing our most exclusive, limited-batch pints.
+                            Delivered with personalized wax-sealed tasting notes for the ultimate corporate gift.</p>
+                        <button
+                            class="self-start px-6 py-3 border border-outline-variant rounded-xl text-inverse-surface hover:border-secondary hover:text-secondary transition-colors font-label">
+                            View Collections
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 relative min-h-[300px]">
+                        <img alt=""
+                            class="absolute inset-0 w-full h-full object-cover rounded-tl-[4rem] md:rounded-tl-[8rem] shadow-[-20px_0_40px_rgba(21,11,21,0.5)]"
+                            data-alt="Close up of an elegant, dark purple luxury gift box with gold foil lettering, resting on a dark marble surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj3N3Mr9KEqD05fmSC8k1pzfcgwPv_u16AAfmanwEiPqp4NuggM3EtdcgZUtBKbqbxVSVAatKwyZuP-E7GDo4szZ5607e_POiU8a9qpyYZuN8sYP45kKA7NCOxd28GTMvU6nsrahkRTdIez862Y_ByksLuyaSYkFYhz4dyk94rLcm2ctlFB8UqENgIdiXHJ2fpatCbZhfLvebAaehyG5Ljwoz5GPVPgb4tfB5oDPbsUNxggpVjRMnEZ1tY--L6Y1au8cSyrVhSgGVt" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Request Proposal Form Section -->
+        <section class="py-24 px-6 relative overflow-hidden bg-background">
+            <div
+                class="max-w-3xl mx-auto glass-card rounded-[2rem] p-8 md:p-14 relative z-10 shadow-[0_8px_32px_rgba(21,11,21,0.4)] border border-outline-variant/20">
+                <div class="text-center mb-12">
+                    <h2 class="font-headline text-4xl md:text-5xl text-secondary mb-4">Request a Proposal</h2>
+                    <p class="font-body text-on-surface-variant">Begin the journey of crafting your unique dessert
+                        experience. For immediate bookings, call us at <strong class="text-secondary">+1 (555)
+                            123-4567</strong>.</p>
+                </div>
+                <form class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Input -->
+                        <div class="space-y-2 relative group">
+                            <label class="font-label text-sm text-on-surface-variant pl-4">Name</label>
+                            <input
+                                class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-inverse-surface focus:ring-1 focus:ring-secondary focus:outline-none transition-shadow"
+                                placeholder="Your full name" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label text-sm text-on-surface-variant pl-4">Email</label>
+                            <input
+                                class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-inverse-surface focus:ring-1 focus:ring-secondary focus:outline-none transition-shadow"
+                                placeholder="your@email.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label text-sm text-on-surface-variant pl-4">Event Type</label>
+                        <select
+                            class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-inverse-surface focus:ring-1 focus:ring-secondary focus:outline-none appearance-none">
+                            <option>Wedding</option>
+                            <option>College Fest</option>
+                            <option>School Event</option>
+                            <option>Corporate Gifting</option>
+                            <option>Private Party</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label text-sm text-on-surface-variant pl-4">Details &amp; Vision</label>
+                        <textarea
+                            class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-inverse-surface focus:ring-1 focus:ring-secondary focus:outline-none resize-none"
+                            placeholder="Share a glimpse of your event..." rows="4"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-secondary text-on-secondary py-4 rounded-full font-label font-bold text-lg hover:bg-secondary-fixed transition-colors flex justify-center items-center gap-2"
+                        type="submit">
+                        Submit Inquiry
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </div>
+            <!-- Decorative background elements -->
+            <div
+                class="absolute top-1/2 left-0 w-96 h-96 bg-primary-container rounded-full blur-[120px] opacity-20 -translate-y-1/2 -translate-x-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-container rounded-full blur-[100px] opacity-10 translate-y-1/2 translate-x-1/3">
+            </div>
+        </section>
+    </main>
+
+    <main id="about" class="flex-grow pt-24 pb-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[921px] flex items-center justify-center overflow-hidden px-6 md:px-16">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full mix-blend-screen filter blur-[100px] opacity-40">
+                </div>
+                <div
+                    class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-surface-container-highest rounded-full mix-blend-multiply filter blur-[120px] opacity-60">
+                </div>
+            </div>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-7xl mx-auto w-full">
+                <!-- Hero Typography -->
+                <div class="lg:col-span-5 text-center lg:text-left space-y-8">
+                    <h1
+                        class="font-headline text-5xl md:text-7xl lg:text-8xl leading-tight text-secondary drop-shadow-lg tracking-tight">
+                        Make a <br />
+                        <span class="text-primary italic font-light">Wish</span>
+                    </h1>
+                    <p
+                        class="font-body text-lg md:text-xl text-on-surface-variant max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
+                        Launching May 2026 across Mathura. Indulge in our curated selection of artisanal Gelato, classic
+                        Softy, traditional Kulfi, and our signature gym-adjacent Protein Shakes.
+                    </p>
+                    <div class="pt-4">
+                        <button
+                            class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-label font-semibold text-lg hover:shadow-[0_0_20px_rgba(235,182,228,0.4)] transition-all duration-300">
+                            Explore the Menu
+                        </button>
+                    </div>
+                </div>
+                <!-- Immersive Carousel -->
+                <div
+                    class="lg:col-span-7 relative w-full aspect-[4/3] md:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(21,11,21,0.5)]">
+                    <div class="absolute inset-0 flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
+                        <!-- Slide 1: Midnight Plum -->
+                        <div class="min-w-full h-full snap-center relative flex-shrink-0 group">
+                            <img alt="Midnight Plum Ice Cream"
+                                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Dark moody food photography of deep purple plum ice cream scoop in a black ceramic bowl with gold leaf flakes and dark shadows"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAExhXqt1MI_i-fFsoYeSVYs88p0udo_AqzTLXhoUrLjh8HYM0UxpVDfU4WdClDxPphSppGpew4HrotusuWzUXpng2yPgGHECruwjcbg7vNiz1ODTwUFr3sPUzMD4w_3gMB8Nc32OgKajvCEwKQTQZuQ5PqZ1qZAo8dDhjBmvkjGNFC6rIA98eV7M6Wi7eZg3SlFxBu5ZyCDLe1U7-2HysjmWUG6TE0af7aOjeBMmDCiI1KcSAHSOuAZ_NGVC484Jj5vmIhytqkWwDb" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90">
+                            </div>
+                            <div
+                                class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-2xl border border-outline-variant/30">
+                                <h3 class="font-headline text-3xl text-secondary mb-2">Signature Gelato</h3>
+                                <p class="font-body text-sm text-on-surface-variant">Rich, dense, and crafted with
+                                    authentic ingredients for a truly magical experience.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Gilded Vanilla -->
+                        <div class="min-w-full h-full snap-center relative flex-shrink-0 group">
+                            <img alt="Gilded Vanilla Ice Cream"
+                                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Elegant macro shot of vanilla bean ice cream with edible gold leaf resting on a dark slate board with soft dramatic side lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLsI_MWpqY1rAk-BDx_rM5y0QjFgTRWyyHZdo8v03qGtVoTM_rB3Pl20nHEoMIWRuL9FfRBmYUiGSc6exssMfPcVlWOabxavo59EbEjZAiWVMm-_KJFE5tD8PGtT0UJLoe99-V0_IOBfk3pXf8sF5eNPQfglHAw5d0SD1u_7UJc0bCj0hKq-hutjVE6d9hqm2Ed1L6H3l33lPcdc_yfhYrL8V8oAKxznQlB_t7KhpcHPhSG1irl-gpjjfDoKKHjFijJMbktWcphkH6" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90">
+                            </div>
+                            <div
+                                class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-2xl border border-outline-variant/30">
+                                <h3 class="font-headline text-3xl text-secondary mb-2">Classic Softy &amp; Kulfi</h3>
+                                <p class="font-body text-sm text-on-surface-variant">Nostalgic swirls of soft serve and
+                                    traditional aged Kulfi, perfected over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Alchemy (Process) Section - Asymmetric Bento -->
+        <section class="py-24 px-6 md:px-16 bg-surface-container-low mt-12 rounded-[3rem]">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-2xl">
+                        <span
+                            class="font-label text-primary uppercase tracking-widest text-sm font-semibold mb-4 block">The
+                            Process</span>
+                        <h2 class="font-headline text-5xl md:text-6xl text-on-background">Our Magic</h2>
+                    </div>
+                    <p class="font-body text-on-surface-variant max-w-md text-right hidden md:block">
+                        We blend traditional artisanship with modern desires. Every scoop, swirl, and shake is a
+                        carefully calibrated wish granted.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+                    <!-- Bento Item 1: Wide -->
+                    <div
+                        class="md:col-span-8 bg-surface-container-high rounded-3xl p-8 flex flex-col justify-end relative overflow-hidden group shadow-[inset_0_-4px_24px_rgba(21,11,21,0.2)]">
+                        <img alt="Mixing Ingredients"
+                            class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover:opacity-60 transition-opacity duration-500"
+                            data-alt="Close up of dark liquid chocolate being poured into a copper bowl in a dimly lit artisan kitchen with cinematic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA764UZCEk2vul3uRzRzheS8NXsCy71QPZxUZwalopvVVgYwKwpfBrv7t_KsehxVSfZ4fOOgmPTGOLghNenKSIU1snfCSNHVpES7bjpAtPlykh6qSAbss6m2VAQSwfq4vBZJorgZHccOWiA84FY5Gm0QFwKPZtBDlMQsJ79ThmSwZkK_ZnYt3mcWi3JBSNs6N8HEaHT_08MoEV3bVXJzFpNPoZtHirlJKKkNpp29Voq5rW9-63AIxIq6T3qB3TbEVjcut6mwfr4z5Oo" />
+                        <div class="relative z-10">
+                            <h3 class="font-headline text-3xl text-secondary mb-3">Artisanal Offerings</h3>
+                            <p class="font-body text-on-surface-variant max-w-lg">From rich Gelatos to nostalgic Softies
+                                and authentic Kulfi, crafted in small batches to ensure absolute textural perfection.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Bento Item 2: Tall -->
+                    <div
+                        class="md:col-span-4 md:row-span-2 bg-surface-container-lowest rounded-3xl p-8 border border-outline-variant/10 relative overflow-hidden flex flex-col items-center justify-center text-center">
+                        <div class="absolute inset-0 bg-gradient-to-b from-primary-container/20 to-transparent"></div>
+                        <span
+                            class="material-symbols-outlined text-6xl text-primary mb-6 drop-shadow-md">fitness_center</span>
+                        <h3 class="font-headline text-3xl text-inverse-surface mb-4">Gym-Adjacent Fuel</h3>
+                        <p class="font-body text-on-surface-variant text-sm">Fuel your gains with our specialized
+                            high-protein shakes. Located conveniently next to local gyms for the perfect post-workout
+                            recovery treat.</p>
+                    </div>
+                    <!-- Bento Item 3: Square -->
+                    <div
+                        class="md:col-span-4 bg-surface-bright rounded-3xl p-8 flex flex-col justify-between shadow-[0_8px_32px_rgba(21,11,21,0.1)]">
+                        <span class="material-symbols-outlined text-4xl text-secondary">storefront</span>
+                        <div>
+                            <h3 class="font-headline text-2xl text-on-background mb-2">Mathura Branches</h3>
+                            <p class="font-body text-sm text-on-surface-variant">Launching May 2026. Preparing to cast
+                                our spell across multiple convenient locations in Mathura.</p>
+                        </div>
+                    </div>
+                    <!-- Bento Item 4: Square Image -->
+                    <div class="md:col-span-4 rounded-3xl overflow-hidden relative group">
+                        <img alt="Vanilla Bean"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Macro shot of rich dark vanilla bean pods crossed over each other on a dark textured slate surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsb4bPeYl2I6Fdgn6euySFnl1f24RTq3FN_xZABYapBPLFlWIs_yHrJTlPzIme_hq-wnDsfq8kx0yYuGrIRnVHd_jDIs5NpXiD67OJWcCj1FVJZrpPVPNaXjUwp0MxwG_WIJAQmAmXays5oyCUrbvAuwv2tiOQ3PuXTevFRZuvkLylF-q4-WQyNlsDiTrO8UUJWHRvb-JQLroGyEYu7SKdW0rKBs1RHhTD8ZwAJTn8d6nh5ACuEwtuNkP3WjAlM3OqaeUu9tNu6Vmq" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-32 px-6 md:px-16 text-center relative">
+            <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-container-high via-background to-background -z-10">
+            </div>
+            <h2 class="font-headline text-5xl md:text-7xl text-secondary mb-8">Ready to Indulge?</h2>
+            <p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 font-light">
+                Experience the full spectrum of our magical creations. Book a private tasting at our boutique parlor.
+            </p>
+            <button
+                class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-secondary text-on-secondary font-label font-bold text-lg hover:bg-secondary-fixed transition-colors shadow-[0_0_30px_rgba(233,195,73,0.2)]">
+                Book a Tasting Session
+            </button>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-[#150b15] dark:bg-[#150b15] w-full rounded-t-[3rem] mt-20 shadow-[0_-4px_24px_rgba(21,11,21,0.06)]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-16 py-12 gap-8">
+            <div class="text-xl font-serif text-[#e9c349]">
+                Gelato Genie
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <span class="font-body font-light text-[#f1ddec] opacity-70">Mathura Locations (May 2026)</span>
+                <span class="font-body font-light text-[#f1ddec] opacity-70">Event Bookings: +91 98765 43210</span>
+            </div>
+            <div class="font-body font-light text-sm text-[#f1ddec] opacity-50">
+                © 2026 Gelato Genie. Make a Wish.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
